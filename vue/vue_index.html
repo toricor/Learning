@@ -1,0 +1,50 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+    {{ message }}
+</div>
+<hr />
+
+<div id="app-2">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds
+	to see my dynamically bound title!
+  </span>
+</div>
+  
+<hr>
+<div id="app-3">
+  <p v-if="seen">Now you see me</p>
+</div>
+
+<hr width="99%">
+<div id="app-4">
+    <ol>
+	    <li v-for="todooo in todos">
+		    {{ todooo.text }}
+		</li>
+	</ol>
+</div>
+
+<hr>
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+
+<hr>
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+
+<hr>
+<div id="app-7">
+    <ol>
+	    <todo-item v-for="item in groceryList" :key="item.text" v-bind:todo="item"></todo-item>
+	</ol>
+</div>
+
+<script src="vue_tutorial.js"></script>
+
+
